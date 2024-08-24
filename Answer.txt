@@ -1,0 +1,11 @@
+## Copilot
+It looks like you're trying to delete an installation token from GitHub using the curl command. Let me help you with that!
+The command you provided seems to have a small issue. The -x delete flag is not valid for curl. Instead, you can use the -X DELETE flag to specify the HTTP method for the request. Here's the corrected command:
+
+curl -X DELETE \
+  -H "accept: application/vnd.github+json" \
+  -H "authorization: bearer <your-token>" \
+  -H "x-github-api-version: 2022-11-28" \
+  https://api.github.com/installation/token
+
+Make sure to replace <your-token> with your actual GitHub token. If you have any other questions or need further assistance, feel free to ask! 😊
